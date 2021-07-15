@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.CartFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_cart_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_weight="1" />
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_weight="5"
+        app:cardElevation="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:text="Total : "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:id="@+id/fragment_cart_tv_totalPrice"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="123$"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/fragment_cart_btn_checkout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Checkout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_19ssp" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

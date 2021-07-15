@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintCircleRadius="@dimen/_100ssp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/logIn_img_back"
+            android:layout_width="14dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SETTING"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_22ssp" />
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_weight="0.5"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="#ffff"
+                android:drawableStart="@drawable/ic_icons___home"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:drawablePadding="@dimen/_6sdp"
+                android:padding="@dimen/_6sdp"
+                android:shadowRadius="@dimen/_minus1sdp"
+                android:text="MY Order"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+
+                android:textStyle="normal" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="#ffff"
+                android:drawableStart="@drawable/ic_icons___home"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:drawablePadding="@dimen/_6sdp"
+                android:padding="@dimen/_6sdp"
+                android:text="Setting"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="#ffff"
+                android:drawableStart="@drawable/ic_icons___home"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:drawablePadding="@dimen/_6sdp"
+                android:padding="@dimen/_6sdp"
+                android:shadowRadius="@dimen/_minus1sdp"
+                android:text="MY Order"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+
+                android:textStyle="normal" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="#ffff"
+                android:drawableStart="@drawable/ic_icons___home"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:drawablePadding="@dimen/_6sdp"
+                android:padding="@dimen/_6sdp"
+                android:text="Setting"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

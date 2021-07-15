@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.IntroPage">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/intro_page_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_row="1"
+        android:layout_rowWeight="40"
+        android:layout_column="0"
+        android:layout_margin="@dimen/_5sdp" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/intro_page_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:tabGravity="center"
+        app:tabIndicatorGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabPaddingStart="0dp"
+        app:tabPaddingEnd="0dp"
+           />
+
+    <Button
+        android:id="@+id/intro_page_btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_row="3"
+        android:layout_rowWeight="5"
+        android:layout_column="0"
+        android:layout_margin="@dimen/_5sdp"
+        android:backgroundTint="@color/purple_500"
+        android:text="get started"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp" />
+</GridLayout>

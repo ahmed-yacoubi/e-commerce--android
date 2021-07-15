@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    tools:context=".fragment.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/profile_img_back"
+            android:layout_width="14dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SETTING"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_22ssp" />
+
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/profile_btn_changePhone"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="#ffff"
+                android:drawableStart="@drawable/ic_icons___home"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                android:text="change phone number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/profile_btn_ShowMyOrder"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="#ffff"
+                android:drawableStart="@drawable/ic_icons___home"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                android:text="Show MY Order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/profile_btn_changePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="#ffff"
+                android:drawableStart="@drawable/ic_icons___home"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                android:text="change password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/profile_btn_changeName"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="#ffff"
+                android:drawableStart="@drawable/ic_icons___home"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                android:text="change name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/profile_et_oldPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="center"
+        android:hint="Enter old password"
+        android:textColorHint="#7E5858"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/profile_et_newPassword"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="center"
+        android:hint="Enter new password"
+        android:textColorHint="#7E5858"
+        android:textSize="@dimen/_14sdp"
+
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/profile_btn_doChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="#ffff"
+        android:drawableStart="@drawable/ic_icons___home"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:gravity="center"
+        android:padding="@dimen/_6sdp"
+        android:text="change name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+    <EditText
+        android:id="@+id/profile_et_newName"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="center"
+        android:hint="Enter new name"
+        android:textColorHint="#7E5858"
+        android:textSize="@dimen/_14sdp"
+
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/profile_btn_doChangeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="#ffff"
+        android:drawableStart="@drawable/ic_icons___home"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:gravity="center"
+        android:padding="@dimen/_6sdp"
+        android:text="change name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/profile_et_newPhone"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="center"
+        android:hint="Enter new phone"
+        android:textColorHint="#7E5858"
+        android:textSize="@dimen/_14sdp"
+
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/profile_btn_doChangePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="#ffff"
+        android:drawableStart="@drawable/ic_icons___home"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:gravity="center"
+        android:padding="@dimen/_6sdp"
+        android:text="change name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+</LinearLayout>
