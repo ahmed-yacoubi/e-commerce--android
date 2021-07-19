@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ahmed.yacoubi.e_commerce.R;
-import ahmed.yacoubi.e_commerce.TempControlPanel;
 import ahmed.yacoubi.e_commerce.adapter.HomeViewPagerAdapter;
 import ahmed.yacoubi.e_commerce.fragment.CartFragment;
 import ahmed.yacoubi.e_commerce.fragment.FavoriteFragment;

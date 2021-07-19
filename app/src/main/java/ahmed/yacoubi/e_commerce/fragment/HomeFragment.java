@@ -29,7 +29,6 @@ import ahmed.yacoubi.e_commerce.model.Category;
 public class HomeFragment extends Fragment {
     private RecycleCategory adapter;
     private RecyclerView fragmentHomeRec;
-    private RecycleProductItem adapterProduct;
     private Database database;
     private FirebaseShop firebaseShop;
     private SendDataToActivity sendDataToActivity;
@@ -86,8 +85,8 @@ public class HomeFragment extends Fragment {
             public void getCategories(List<Category> categoryList) {
                 for (int i = 0; i < categoryList.size(); i++) {
 
-                        Bitmap bitmap = database.getImage(categoryList.get(i).getName());
-                        categoryList.get(i).setBitmap(bitmap);
+                    Bitmap bitmap = database.getImage(categoryList.get(i).getName());
+                    categoryList.get(i).setBitmap(bitmap);
 
                 }
 

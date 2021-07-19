@@ -37,7 +37,7 @@ public class ProductDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_details);
         userId = getSharedPreferences("main", MODE_PRIVATE).getString("id", null);
-        product = (Product) getIntent().getParcelableExtra("product");
+        product = (Product) getIntent().getSerializableExtra("product");
         database = new Database(this);
         product.setBitmap(database.getImage(product.getName()));
         initView();

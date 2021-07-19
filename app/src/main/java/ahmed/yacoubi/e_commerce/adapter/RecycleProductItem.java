@@ -60,6 +60,7 @@ public class RecycleProductItem extends RecyclerView.Adapter<RecycleProductItem.
 
         switch (typePage) {
             case "cart":
+            case "buyed":
                 layout = R.layout.cart_item;
                 break;
             case "favorite":
@@ -67,13 +68,12 @@ public class RecycleProductItem extends RecyclerView.Adapter<RecycleProductItem.
                 break;
             case "product":
                 layout = R.layout.product_item;
-
+                break;
 
         }
         return new CartViewHolder(LayoutInflater.from(context).inflate(layout, null, false));
 
     }
-
 
     @Override
     public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
@@ -81,20 +81,17 @@ public class RecycleProductItem extends RecyclerView.Adapter<RecycleProductItem.
 
             case "cart":
                 cartHolder(holder, position);
-
                 break;
 
             case "favorite":
                 favoriteHolder(holder, position);
-
                 break;
 
             case "product":
                 productHolder(holder, position);
-
                 break;
-
-
+            case "buyed":
+                buyedHolder(holder, position);
         }
 
 
@@ -160,6 +157,20 @@ public class RecycleProductItem extends RecyclerView.Adapter<RecycleProductItem.
                 }
             }
         });
+    }
+
+    private void buyedHolder(@NonNull CartViewHolder holder, int position) {
+
+        holder.img_imageProduct.setImageBitmap(list.get(position).getBitmap());
+
+
+        holder.tv_NameProduct.setText(list.get(position).getName());
+        holder.tv_details.setText(list.get(position).getDesc());
+        holder.tv_totalPrice.setText(list.get(position).getPrice() * list.get(position).getCount() + "$");
+        holder.tv_count.setText(list.get(position).getCount() + "");
+        holder.tv_ubCount.setEnabled(false);
+        holder.tv_addCount.setEnabled(false);
+
     }
 
     private void favoriteHolder(@NonNull CartViewHolder holder, int position) {

@@ -6,7 +6,7 @@ import android.os.Parcelable;
 
 import java.io.Serializable;
 
-public class Product implements Parcelable {
+public class Product implements Serializable  {
     private String id;
     private String name;
     private String desc;
@@ -18,6 +18,7 @@ public class Product implements Parcelable {
     private float rateAverage;
     private int numOfRate;
     private int count = 1;
+    private String adminToken;
 
     public Product() {
 
@@ -35,6 +36,25 @@ public class Product implements Parcelable {
         this.numOfRate = numOfRate;
     }
 
+    public void setAdminToken(String adminToken) {
+        this.adminToken = adminToken;
+    }
+
+    public Product(String id, String name, String desc, int amount, double price, String category, Bitmap bitmap, boolean isFavorite, float rateAverage, int numOfRate, int count, String adminToken) {
+        this.id = id;
+        this.name = name;
+        this.desc = desc;
+        this.amount = amount;
+        this.price = price;
+        this.category = category;
+        this.bitmap = bitmap;
+        this.isFavorite = isFavorite;
+        this.rateAverage = rateAverage;
+        this.numOfRate = numOfRate;
+        this.count = count;
+        this.adminToken = adminToken;
+    }
+
     public Product(String id, String name, String desc, int amount, double price, String category, boolean isFavorite, float rateAverage, int numOfRate, int count) {
         this.id = id;
         this.name = name;
@@ -47,6 +67,12 @@ public class Product implements Parcelable {
         this.numOfRate = numOfRate;
         this.count = count;
     }
+
+    public String getAdminToken() {
+        return adminToken;
+    }
+
+
 
     public Product(String id, String name, String desc, int amount, double price, String category, Bitmap bitmap, boolean isFavorite, float rateAverage, int numOfRate, int count) {
         this.id = id;
@@ -76,17 +102,7 @@ public class Product implements Parcelable {
         count = in.readInt();
     }
 
-    public static final Creator<Product> CREATOR = new Creator<Product>() {
-        @Override
-        public Product createFromParcel(Parcel in) {
-            return new Product(in);
-        }
 
-        @Override
-        public Product[] newArray(int size) {
-            return new Product[size];
-        }
-    };
 
     public int getCount() {
         return count;
@@ -178,23 +194,5 @@ public class Product implements Parcelable {
         this.category = category;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id);
-        dest.writeString(name);
-        dest.writeString(desc);
-        dest.writeInt(amount);
-        dest.writeDouble(price);
-        dest.writeString(category);
-        dest.writeParcelable(bitmap, flags);
-        dest.writeByte((byte) (isFavorite ? 1 : 0));
-        dest.writeFloat(rateAverage);
-        dest.writeInt(numOfRate);
-        dest.writeInt(count);
-    }
 }

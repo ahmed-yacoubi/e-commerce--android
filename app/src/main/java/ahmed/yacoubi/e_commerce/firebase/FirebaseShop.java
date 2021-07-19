@@ -143,7 +143,7 @@ public class FirebaseShop {
 
 
                                 Product product = dataSnap.getValue(Product.class);
-                                Log.d("qqqqqq", "onDataChange: " + product.getName());
+                                Log.d("qqqqqq", "onDataChange: " + product.getAdminToken());
                                 for (Product p : loveProduct) {
 
                                     if (p.getName().equals(product.getName())) {

@@ -29,6 +29,7 @@ import ahmed.yacoubi.e_commerce.callback.CallBackProduct;
 import ahmed.yacoubi.e_commerce.database.Database;
 import ahmed.yacoubi.e_commerce.model.Product;
 import ahmed.yacoubi.e_commerce.model.User;
+import ahmed.yacoubi.e_commerce.serves.PushNotification;
 
 public class FirebaseUserShopping {
     private Activity activity;
@@ -134,6 +135,27 @@ public class FirebaseUserShopping {
         });
     }
 
+    public void getBuyedProduct(CallBackProduct callback) {
+        userReference.child("buyed").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                List<Product> productList = new ArrayList<>();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Product product = dataSnapshot.getValue(Product.class);
+
+
+                    productList.add(product);
+                }
+                callback.getProducts(productList);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
     public void setFavoriteProduct(Product product) {
         product.setBitmap(null);
         userReference.child("favorite").child(product.getId() + "").setValue(product);
@@ -156,12 +178,17 @@ public class FirebaseUserShopping {
                 userReference.child("info").setValue(user);
                 userReference.child("cart").child(product.getId() + "").removeValue();
                 product.setBitmap(null);
-                userReference.child("buyed").child(product.getId() + "").setValue(product);
+
+                PushNotification.sendNotification(product.getAdminToken(), "Buying a product : "
+                                + product.getName(),
+                        "( "+product.getCount()+ ") Pieces of the product were purchased, by : " + user.getName() + " , total price : " + (product.getCount() * product.getPrice())
+                                + " , The remaining quantity : " + product.getAmount());
+                product.setAdminToken(product.getAdminToken());
                 product.setCount(0);
-
                 shopReference.child(product.getCategory()).child("product").child(product.getId() + "").setValue(product);
-            }
 
+                userReference.child("buyed").child(product.getId() + "").setValue(product);
+            }
             callBack.getResult("done");
 
         } else {

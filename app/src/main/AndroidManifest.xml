@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ahmed.yacoubi.e_commerce">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,10 +15,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecommerce">
+
+
         <activity android:name=".ui.BuyedProduct"></activity>
         <activity android:name=".ui.ProductItem" />
         <activity android:name=".ui.MainPage"></activity>
         <activity android:name=".ui.LogIn"></activity>
+
+
+        <service
+            android:name=".serves.PushNotification"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity android:name=".ui.SplashActivity">
 
             <intent-filter>
